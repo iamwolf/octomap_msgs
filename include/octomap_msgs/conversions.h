@@ -148,7 +148,7 @@ namespace octomap_msgs{
   template <class OctomapT>
   static inline bool binaryMapToMsg(const OctomapT& octomap, Octomap& msg){
     msg.resolution = octomap.getResolution();
-    msg.id = octomap.getTreeType();
+    msg.id = "OcTree";//octomap.getTreeType();
     msg.binary = true;
     
     std::stringstream datastream;
